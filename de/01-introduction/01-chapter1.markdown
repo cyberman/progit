@@ -350,14 +350,14 @@ Auf Windows Systemen sucht Git nach der `.gitconfig` Datei im `$HOME` Verzeichni
 
 The first thing you should do when you install Git is to set your user name and e-mail address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you pass around:
 
-Nachdem Du Git installiert hast, solltest Du als erstes deinen Namen und deine E-Mail Adresse konfigurieren. Das ist wichtig, weil Git diese Information für jeden Commit verwendet, den Du anlegst, und sie ist unveränderlich in deine Commits eingebaut (xxx):
+Nachdem Du Git installiert hast, solltest Du als erstes deinen Namen und deine E-Mail-Adresse konfigurieren. Das ist wichtig, weil Git diese Information für jeden Commit verwendet, den Du anlegst, und sie ist unveränderlich in deine Commits integriert:
 
 	$ git config --global user.name "John Doe"
 	$ git config --global user.email johndoe@example.com
 
 Again, you need to do this only once if you pass the `--global` option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or e-mail address for specific projects, you can run the command without the `--global` option when you’re in that project.
 
-Du brauchst diese Konfiguration, wie schon erwähnt, nur einmal vorzunehmen, wenn Du die `--global` Option verwendest, weil Git diese Information dann für all deine Projekte verwenden wird. Wenn Du sie für ein spezielles Projekt mit einem anderen Namen oder einer anderen E-Mail Adresse überschreiben willst, kannst Du dazu den Befehl ohne die `--global` Option innerhalb dieses Projektes ausführen.
+Du musst diese Konfiguration, wie schon erwähnt, nur einmal vorzunehmen, wenn Du die `--global` Option verwendest, weil Git diese Information dann für all deine Projekte verwenden wird. Wenn Du sie für ein spezielles Projekt mit einem anderen Namen oder einer anderen E-Mail-Adresse überschreiben willst, kannst Du dazu den Befehl ohne die `--global` Option innerhalb dieses Projektes ausführen.
 
 ### Your Editor ###
 
@@ -375,13 +375,13 @@ Nachdem Du deine Identität jetzt konfiguriert hast, kannst Du einstellen, welch
 
 Another useful option you may want to configure is the default diff tool to use to resolve merge conflicts. Say you want to use vimdiff:
 
-Eine andere nützliche Einstellung, die Du möglicherweise vornehmen willst, ist welches Diff Programm Git verwendet. Mit diesem Programm kannst Du Konflikte auflösen, die während der Arbeit mit Git manchmal auftreten. Wenn Du beispielsweise vimdiff verwenden willst, kannst Du das so festlegen:
+Eine weitere nützliche Einstellung, die Du möglicherweise vornehmen möchtest, ist, welches Diff-Programm Git verwendet. Mit diesem Programm kannst Du Konflikte auflösen, die während der Arbeit mit Git manchmal auftreten. Wenn Du beispielsweise vimdiff verwenden willst, kannst Du das so festlegen:
 
 	$ git config --global merge.tool vimdiff
 
 Git accepts kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge, and opendiff as valid merge tools. You can also set up a custom tool; see Chapter 7 for more information about doing that.
 
-Git kann von Hause aus mit den folgenden Diff Programmen arbeiten: kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge, and opendiff. Außerdem kannst Du ein eigenes Programm aufsetzen. Wir werden in Kapitel 7 darauf eingehen, wie das geht.
+Git kann von Hause aus mit den folgenden Diff-Programmen arbeiten: kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge, and opendiff. Außerdem kannst Du ein eigenes Programm aufsetzen. In Kapitel 7 werden wir näher darauf eingehen, wie das geht.
 
 ### Checking Your Settings ###
 
@@ -417,7 +417,7 @@ Außerdem kannst Du mit dem Befehl `git config {key}` prüfen, welchen Wert Git 
 
 If you ever need help while using Git, there are three ways to get the manual page (manpage) help for any of the Git commands:
 
-Falls Du jemals Hilfe in der Anwendung von Git benötigst, gibt es drei Möglichkeiten, die entsprechende Seite aus der Dokumentation (manpage) für jeden Git Befehl anzuzeigen:
+Falls Du jemals Hilfe bei der Anwendung von Git benötigst, gibt es drei Möglichkeiten, für jeden Git-Befehl die entsprechende Seite aus der Dokumentation (manpage) anzuzeigen:
 
 	$ git help <verb>
 	$ git <verb> --help
@@ -425,17 +425,19 @@ Falls Du jemals Hilfe in der Anwendung von Git benötigst, gibt es drei Möglich
 
 For example, you can get the manpage help for the config command by running
 
-Beispielsweise erhältst Du die Hilfeseite für den `git config` Befehl so:
+Beispielsweise erhältst Du die Hilfeseite für den Befehl `git config` so:
 
 	$ git help config
 
 These commands are nice because you can access them anywhere, even offline.
 If the manpages and this book aren’t enough and you need in-person help, you can try the `#git` or `#github` channel on the Freenode IRC server (irc.freenode.net). These channels are regularly filled with hundreds of people who are all very knowledgeable about Git and are often willing to help.
 
-Die "manpage" Dokumentation ist nützlich, weil Du sie jederzeit anzeigen kannst, auch wenn Du offline bist. Wenn dir die manpages und dieses Buch nicht ausreichen, kannst Du deine Fragen auch in den Chaträumen `#git` oder `#github` auf dem Freenode IRC Server (irc.freenode.net) stellen. Diese Räume sind in der Regel sehr gut besucht. Normalerweise findet sich unter den hunderten von Anwendern, die oft sehr viel Erfahrung mit Git haben, irgendjemand, der deine Fragen gern beantwortet.
+Die "manpage" Dokumentation ist nützlich, weil Du sie jederzeit anzeigen kannst, auch wenn Du offline bist. Wenn dir die manpages und dieses Buch nicht ausreichen, kannst Du deine Fragen auch in den Chaträumen `#git` oder `#github` auf dem Freenode IRC Server (irc.freenode.net) stellen. Diese Räume sind in der Regel sehr gut besucht. Normalerweise findet sich unter den Hunderten von Anwendern, die oft sehr viel Erfahrung mit Git haben, immer jemand, der deine Fragen gern beantwortet.
 
 ## Summary ##
 
+## Zusammenfassung ##
+
 You should have a basic understanding of what Git is and how it’s different from the CVCS you may have been using. You should also now have a working version of Git on your system that’s set up with your personal identity. It’s now time to learn some Git basics.
 
-Du solltest jetzt ein basales Verständnis davon haben, was Git ist und wie es sich von anderen CVCS unterscheidet, die Du möglicherweise schon verwendet hast. Du solltest außerdem eine funktionierende Git Version auf deinem Rechner installiert und konfiguriert haben. Jetzt wird es Zeit, einige Git Grundlagen zu besprechen.
+Du solltest jetzt ein grundsätzliches Verständnis davon haben, was Git ist und wie es sich von anderen CVCS unterscheidet, die Du möglicherweise schon verwendet hast. Du solltest außerdem eine funktionierende Git-Version auf deinem Rechner installiert und konfiguriert haben. Jetzt wird es Zeit, einige Git-Grundlagen zu besprechen.
